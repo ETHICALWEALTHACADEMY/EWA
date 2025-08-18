@@ -654,6 +654,15 @@
                 </div>
             </div>
         </div>
+
+        <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const ref = urlParams.get('ref');
+        if (ref) {
+            const input = document.querySelector('input[name=\"referrer\"]');
+            if (input) input.value = ref;
+        }
+        </script>
     </footer>
 
     <script src="script.js"></script>
